@@ -1,0 +1,16 @@
+#!/bin/bash
+#Removes all old student databases from MySQL
+
+instructor=nachi
+
+read -p "Are you sure you want to remove all student databases? " -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+  then
+
+  read -s -p "Enter MySQL root password: " root_pw
+  mysql -uroot -p$root_pw  -e "show databases" | grep -v Database | grep -v mysql| grep -v information_schema| grep -v test | grep -v $instructor| grep -v OLD |gawk '{print "drop database " $1 ";select sleep(0.1);"}' | mysql -uroot -p$root_pw
+  mysql -uroot -p$root_pw  -e "SELECT User,Host FROM mysql.user;" | grep -v User | grep -v root| grep -v createdb| grep -v $instructor| grep -v OLD |gawk '{print "drop user " $1 ";select sleep(0.1);"}' | mysql -uroot -p$root_pw
+  mysql -uroot -p$root_pw  -e "flush privileges;"
+
+fi
