@@ -1,6 +1,7 @@
 #!/bin/bash
 
-read -s -p "Enter student's BU login name: " user
+read -p "Enter student's BU login name: " user
+echo \n
 read -s -p "Enter default user password: " user_pw
 
 createdb $user $user $user_pw
