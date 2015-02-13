@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  </head>
+  <body>     
+        <div class="header-banner">
+          <div class="container">
+            <h1>SMGteach2 MySQL</h1>
+          </div>
+        </div>
+        <div class="container">
+          <h2>Add Individual Student</h2>
+          <p>Use the form below to add individual student databases:</p>
+          <form>
+          	<div class="form-group">
+          		<label for="login_name">Student's BU Login Name</label>
+          		<input type="text" class="form-control" id="login_name" placeholder="login name">
+          	</div>
+          	<button type="submit" class="btn btn-primary" onclick="addstudent">Submit</button>
+          </form>
+
+        <h2>Add Class</h2>
+          <p>Use the form below to upload a class list:</p>
+          <form>
+          	<div class="form-group">
+          		<label for="class_list">Class List Upload</label>
+          		<input type="file" id="class_list">
+          		<p class="help-block">The list must be line deliniated with one username per line and no trailing spaces</p>
+          	</div>
+          	<button type="submit" class="btn btn-primary" onclick="addclass">Submit</button>
+          </form>
+        </div>
+    <style>
+         input { display:block; margin: 20px 0; }
+         .header-banner { 
+           background-color: #a71930; 
+           padding: 10px 20px;
+           color: #f8f8f8;
+         }
+         .form-container {
+           max-width: 500px;
+           margin: 0 auto;
+         }
+         .footer {
+           background-color: #333;
+           margin-top: 150px;
+           padding: 20px;
+          }
+           
+    </style>
+  </body>
+</html>
