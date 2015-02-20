@@ -2,5 +2,5 @@
 
   while read p; do
     echo "Creating database for "$p
-    createdb $p $p $user_pw
-  done < $class_list
+    createdb $p $p $1
+  done < $2
