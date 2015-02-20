@@ -1,16 +1,6 @@
 #!/bin/bash
 
-read -p "Are you sure you'd like to add a class? This will reset all user passwords for existing users " -n 1 -r
-echo    # (optional) move to a new line
-if [[ $REPLY =~ ^[Yy]$ ]]
-  then
-
-  read -s -p "Enter default user password: " user_pw
-  echo \n
-  read -p "Enter full path to line delimited class list: " class_list
   while read p; do
     echo "Creating database for "$p
     createdb $p $p $user_pw
   done < $class_list
-
-fi
