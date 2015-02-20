@@ -1,6 +1,5 @@
 #!/bin/bash
 
-  while read p; do
-    echo "Creating database for "$p
+  while read $2; do
     createdb $p $p $1
   done < $2
