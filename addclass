@@ -1,6 +1,7 @@
 #!/bin/bash
 
-  while read line; do
+  while read line
+  do
     name=$line
-    createdb $name $name $1
-  done < $2
+    createdb $name $name $2
+  done < $1
