@@ -2,6 +2,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="UTF-8">
+      <title>SMGteach2 MySQL</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
   </head>
   <body>     
@@ -13,10 +14,12 @@
         <div class="container">
           <h2>Add Individual Student</h2>
           <p>Use the form below to add individual student databases:</p>
-          <form>
+          <form action="scripter.php" method="post">
           	<div class="form-group">
           		<label for="login_name">Student's BU Login Name</label>
-          		<input type="text" class="form-control" id="login_name" placeholder="login name">
+          		<input type="text" class="form-control" name="login_name" placeholder="login name">
+                <label for="login_name">Create a Password</label>
+          		<input type="password" class="form-control" name="default_pass" placeholder="password">
           	</div>
           	<button type="submit" class="btn btn-primary">Submit</button>
           </form>
