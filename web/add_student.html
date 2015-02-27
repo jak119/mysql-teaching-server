@@ -26,9 +26,10 @@
 
         <h2>Add Class</h2>
           <p>Use the form below to upload a class list:</p>
+          <p class="help-block">Note: Adding a class will reset all user passwords for existing users</p>
           <form action="class_script.php" method="post" enctype="multipart/form-data">
           	<div class="form-group">
-                <label for="login_name">Enter Default User Password</label>
+                <label for="login_name">Enter Default User Passwords</label>
           		<input type="password" class="form-control" name="df_pass2" placeholder="password">
           		<label for="class_list">Class List Upload</label>
           		<input type="file" name="class_list" id="class_list">
