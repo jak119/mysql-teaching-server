@@ -24,7 +24,7 @@
     // if everything is ok, try to upload file
     } else {
         if (move_uploaded_file($_FILES["class_list"]["tmp_name"], $target_file)) {
-            echo "The file ". basename( $_FILES["class_list"]["name"]). " has been uploaded.";
+            echo "The file ". basename( $_FILES["class_list"]["name"]). " has been uploaded and the users have been added to the database.";
         } else {
             echo "Sorry, there was an error uploading your file.";
         }
