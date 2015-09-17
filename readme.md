@@ -1,6 +1,6 @@
 #MySQL Teaching Lab Scripts
 
-A collection of scripts to manage and automate the management of a MySQL teaching lab server.
+A collection of scripts and a basic web front end to manage and automate the management of a MySQL teaching lab server for a faculty member.
 
 ## [addclass](addclass)
 Run with `addclass` to add a full list of students from a line delimited list.
